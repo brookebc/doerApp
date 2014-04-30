@@ -18,14 +18,14 @@
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="../bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
+      <script type="template/html" id="putitheretmp">
+        <% _.each(activetodoarray, function(activetodoarray,index,list) { %>
+            <li><%= activetodoarray.activity %></li>
+        <% }); %>
+        </script>
 
     </head>
    
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-
         <div class="container">
             <div class="header">
                 <ul class="nav nav-pills pull-right">
@@ -34,90 +34,36 @@
                 </ul>
                 <h1 class="text-muted">ToDo to ToDA!</h1>
             </div>
-         
         <body>
-        <div class"styled">
-            Also need to add a transparent div here to style things up
+            <div class="topper">
+               <!-- This is just an empty styled div for space-->
 
-        </div>
+            </div>
      <!--      <h4>To Do List</h4> -->
         <div>
         <div class="lines"></div>
-          <ul class="list">
-            <li>Activity</li>
-            <li>Activity</li>
-            <li>Activity</li>
-            <li>Activity</li>
-            <li>Activity</li>
+         <p><input type="text" placeholder="What do you want to do?" id="newitemtoadd"></input><p>
+          <ul class="list" id="righthere">
+           <li class="completed">testing</li>
           </ul>
         </div>
+      
 
         <div class="app-nav">
             <ul>
                 <li>Items left</li>
                 <li>All</li>
                 <li>Active</li>
-                <li>Completed</li>
+                <li>Completed</li><p>completedtotal</p>
                 <li>Clear Completed</li>
             </ul>
         </div>
         <div>
-            <!-- Button trigger modal -->
-            <button class="pull-left btn btn-warning btn-sm" data-toggle="modal" data-target="#myModal"> <span class="glyphicon glyphicon-pencil"></span>
-              Add New Item
-            </button>
-            This is where the buttons go to sort the data (nav?)
         </div>
     
-    <!-- modal starts here-->
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Add your new activity here</h4>
-                  </div>
-                  <div class="modal-body">
-                     <!-- Form for new Todo Items -->
-                        <form id="new-todo-form" method="POST" action="#">
-                          <input type="text" name="new-todo" id="new-todo" placeholder="Enter a todo item..." required>
-                        </form>
-                    <!-- This is where I will add the form content-->
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default-sm" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary add">Add Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-    </body>
-       <!-- modal ends here-->
+   
 
-            <!-- <div class="jumbotron">
-                <h1>'Allo, 'Allo!</h1>
-                <p class="lead">Always a pleasure scaffolding your apps.</p>
-                <p><a class="btn btn-lg btn-success" href="#">Splendid! <span class="glyphicon glyphicon-ok"></span></a></p>
-            </div> -->
-
-            <!-- <div class="row marketing">
-                <div class="col-lg-6">
-                    <h4>HTML5 Boilerplate</h4>
-                    <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-                    <h4>Sass</h4>
-                    <p>Sass is a mature, stable, and powerful professional grade CSS extension language.</p>
-
-
-                    <h4>Bootstrap</h4>
-                    <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-
-                    <h4>Modernizr</h4>
-                    <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-
-                </div>
-            </div> -->
+        </body>
 
             <div class="footer">
                 <p><span class="glyphicon glyphicon-heart"></span> By Brooke Casey</p>
@@ -129,6 +75,7 @@
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../bower_components/underscore/underscore.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 

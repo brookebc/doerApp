@@ -1,28 +1,50 @@
-console.log('\'Allo \'Allo!');
+$(document).ready(function() {
 
-var newToDo = _.template($("#todoitemTmpl").html(), list);
+	var activeliststring = _.template($("#putitheretmp").html(), activetodoarray);
 
-	$("list").append(newToDo);
-
-$("#newToDoForm").on("add", function(e) {
-  		e.preventDefault();
-  		// var formData = $(this).serializeArray();
-  		// console.log($(this).serializeArray());
-  		var postTitle = $(".newPostTitle").val();
-  		console.log(postContentForm);
-
-  		var newPostObj = {
-  					title: postTitle,
-  					date: "Tuesday, 29, 2014",
-  					content: postContentForm,
-  					author: authorPostForm
-  		};
-  		posts.unshift(newPostObj);
-  		var myPostsString = _.template($("#todoTmpl").html(), list);
-
-  		$(".newPostTitle").val("");
-  		$("#myModal").modal("hide");
-  		$("section").html(myPostsString);
+	$("#righthere").append(activeliststring);
+	calculatecompleted();
+});
 
 
-  });
+var completedtotal = 0;
+
+var culatecompleted = function () {
+	var completedtotal = 0;
+	
+	if (('#righthere li').hasClass('completed') === true) {
+		completedtotal = completedtotal +1;
+		console.log(completedtotal);
+	} else {
+		return completedtotal;
+		alert("You have not completed any items!");
+	}
+}
+
+
+$("input").on("keydown",function(e) {
+	console.log("hello in keydown");
+
+	if(e.keyCode === 13) {
+		// console.log("hello Brooke");
+	var readytoadd = $("#newitemtoadd").val();
+	console.log(readytoadd);
+	// var readytoadd = new activetodoarray(object);
+
+	var newToDoObj = {
+  					activity: readytoadd			
+  		}
+
+	activetodoarray.push(newToDoObj);
+	console.log(activetodoarray);
+	
+	var activeliststring = _.template($("#putitheretmp").html(), activetodoarray);
+	$("#righthere").html(activeliststring);
+	calculatecompleted();
+
+}
+});
+
+
+
+

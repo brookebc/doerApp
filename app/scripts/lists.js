@@ -1,10 +1,14 @@
-//this is where i will put data from some text 
-//that is a placeholder and test on the app
+// placeholder array for objects to be added
 
-var todoitem = [
+var activetodoarray = [
 {
 	activity: "Make this super todo app"
-},{
+	},
+
+{
 	activity: "Go to the beach"
-},
+	}
+
 ];
+
+// var newtoarray = [];

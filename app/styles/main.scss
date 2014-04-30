@@ -101,6 +101,8 @@ body {
   width: 600px;
   margin: 0 auto;
   padding: 0px;
+  min-height: 600px;
+
 }
 
 
@@ -135,12 +137,12 @@ body {
   border-right: 1px solid #ffaa9f;
   width: 2px;
   float: left;
-  height: 250px;
+  min-height: 250px;
   margin-left: 40px;
 }
 
 .app-nav {
-    width: 400px;
+    width: 500px;
 }
 
 .app-nav li {
@@ -151,4 +153,47 @@ body {
 .removePost {
     cursor: pointer;
 }
+.topper {
+    background-color: #6699CC;
+    height: 20px;
+    // margin: 0px auto;
+    padding: 0px;
+    width: 500px;
+}
 
+.papers {
+  background-color: white;
+  height: 350px;
+  padding: 20px;
+  width: 260px;
+  -webkit-box-shadow: 
+        1px 1px   0 rgba(0,   0,   0,   0.100), 
+        3px 3px   0 rgba(255, 255, 255, 1.0), 
+        4px 4px   0 rgba(0,   0,   0,   0.125), 
+        6px 6px   0 rgba(255, 255, 255, 1.0),  
+        7px 7px   0 rgba(0,   0,   0,   0.150), 
+        9px 9px   0 rgba(255, 255, 255, 1.0),  
+        10px 10px 0 rgba(0,   0,   0,   0.175);
+  -moz-box-shadow: 
+        1px 1px   0 rgba(0,   0,   0,   0.100), 
+        3px 3px   0 rgba(255, 255, 255, 1.0), 
+        4px 4px   0 rgba(0,   0,   0,   0.125), 
+        6px 6px   0 rgba(255, 255, 255, 1.0),  
+        7px 7px   0 rgba(0,   0,   0,   0.150), 
+        9px 9px   0 rgba(255, 255, 255, 1.0),  
+        10px 10px 0 rgba(0,   0,   0,   0.175);
+  box-shadow: 
+        1px 1px   0 rgba(0,   0,   0,   0.100), 
+        3px 3px   0 rgba(255, 255, 255, 1.0), 
+        4px 4px   0 rgba(0,   0,   0,   0.125), 
+        6px 6px   0 rgba(255, 255, 255, 1.0),  
+        7px 7px   0 rgba(0,   0,   0,   0.150), 
+        9px 9px   0 rgba(255, 255, 255, 1.0),  
+        10px 10px 0 rgba(0,   0,   0,   0.175);
+    
+}
+
+.completed {
+  text-decoration: line-through;
+
+}
