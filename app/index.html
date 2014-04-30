@@ -32,23 +32,26 @@
                     <li class="active"><a href="index.html">Home</a></li>
                     <li><a href="#">About</a></li>
                 </ul>
-                <h3 class="text-muted">ToDo to ToDA!</h3>
+                <h1 class="text-muted">ToDo to ToDA!</h1>
             </div>
          
         <body>
-        <div>
+        <div class"styled">
             Also need to add a transparent div here to style things up
+
         </div>
      <!--      <h4>To Do List</h4> -->
         <div>
+        <div class="lines"></div>
           <ul class="list">
-            <li>Eat Breakfeast</li>
-            <li>Feed Pugsly, the cow</li>
-            <li>Sit Down</li>
-            <li>Eat lunch</li>
-            <li class="completed">Call mom</li>
+            <li>Activity</li>
+            <li>Activity</li>
+            <li>Activity</li>
+            <li>Activity</li>
+            <li>Activity</li>
           </ul>
         </div>
+
         <div class="app-nav">
             <ul>
                 <li>Items left</li>
@@ -67,22 +70,24 @@
         </div>
     
     <!-- modal starts here-->
-        
-
             <!-- Modal -->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    <h4 class="modal-title" id="myModalLabel">Add your new activity here</h4>
                   </div>
                   <div class="modal-body">
-                    ...
+                     <!-- Form for new Todo Items -->
+                        <form id="new-todo-form" method="POST" action="#">
+                          <input type="text" name="new-todo" id="new-todo" placeholder="Enter a todo item..." required>
+                        </form>
+                    <!-- This is where I will add the form content-->
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-default-sm" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary add">Add Now</button>
                   </div>
                 </div>
               </div>
